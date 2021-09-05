@@ -9,14 +9,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out the repo
-        uses: actions/checkout@v2
-
-      - name: Publish PHP image to Registry
-        uses: elgohr/Publish-Docker-Github-Action@master
-        with:
+    - uses: actions/checkout@master
+    - name: Publish to Registry
+      uses: elgohr/Publish-Docker-Github-Action@master
+      with:
           name: atabegruslan/docker-ci-test
-          context: ../..
-          # dockerfile: ../../Dockerfile
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
