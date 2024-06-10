@@ -8,7 +8,9 @@ Setup Secrets
 
 ![](/Illustrations/secrets.png)
 
-Method 1
+That's the same username and password for logging into your DockerHub
+
+## Method 1
 
 ```
 name: Build Docker Images
@@ -31,7 +33,9 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 ```
 
-Method 2
+![](/Illustrations/method_1.png)
+
+## Method 2
 
 ```
 name: Publish Docker image
